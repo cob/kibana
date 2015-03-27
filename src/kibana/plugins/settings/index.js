@@ -35,7 +35,7 @@ define(function (require, module, exports) {
     return {
       id: 'settings',
       name: 'Settings',
-      order: 3
+      order: (window.self !== window.top ? -1 : 3) //Only show the Settings module if it is not inside an iframe
     };
   });
 });
