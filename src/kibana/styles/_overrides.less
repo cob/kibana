@@ -1,0 +1,17 @@
+.navbar-brand {
+  display:none !important; //Do not show the "Dashboard" span on smaller windows
+}
+
+.navbar-inverse .logo {
+  height: 14px;
+  width: 65px;
+  background-repeat: no-repeat;
+  background-size: 60px 14px;
+  margin-top: 15px;
+}
+
+@media print {
+  a, navbar, .navbar, .visualize-show-spy, .btn-group {
+    display:none !important;
+  }
+}
