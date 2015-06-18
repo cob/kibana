@@ -6,12 +6,18 @@ define(function (require) {
       name: 'max',
       title: 'Max',
       makeLabel: function (aggConfig) {
-        return 'Max ' + aggConfig.params.field.displayName;
+        return aggConfig.params.legend || 'Max ' + aggConfig.params.field.displayName;
       },
       params: [
         {
           name: 'field',
           filterFieldTypes: 'number,date'
+        },
+        {
+          name: 'legend',
+          type: 'string',
+          advanced: true,
+          write: function () {}
         }
       ]
     });
