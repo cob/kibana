@@ -6,7 +6,7 @@ define(function (require) {
       name: 'weighted-mean',
       title: 'Weighted Mean',
       makeLabel: function (aggConfig) {
-        return 'Weighted Mean of ' + aggConfig.params.value + ' over ' + aggConfig.params.weight;
+        return aggConfig.params.legend || 'Weighted Mean of ' + aggConfig.params.value + ' over ' + aggConfig.params.weight;
       },
       params: [
         {
@@ -16,6 +16,12 @@ define(function (require) {
         {
           name: 'weight',
           type: 'string'
+        },
+        {
+          name: 'legend',
+          type: 'string',
+          advanced: true,
+          write: function () {}
         }
       ]
     });

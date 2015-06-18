@@ -6,12 +6,18 @@ define(function (require) {
       name: 'min',
       title: 'Min',
       makeLabel: function (aggConfig) {
-        return 'Min ' + aggConfig.params.field.displayName;
+        return aggConfig.params.legend || 'Min ' + aggConfig.params.field.displayName;
       },
       params: [
         {
           name: 'field',
           filterFieldTypes: 'number,date'
+        },
+        {
+          name: 'legend',
+          type: 'string',
+          advanced: true,
+          write: function () {}
         }
       ]
     });

@@ -6,12 +6,18 @@ define(function (require) {
       name: 'avg',
       title: 'Average',
       makeLabel: function (aggConfig) {
-        return 'Average ' + aggConfig.params.field.displayName;
+        return aggConfig.params.legend || 'Average ' + aggConfig.params.field.displayName;
       },
       params: [
         {
           name: 'field',
           filterFieldTypes: 'number'
+        },
+        {
+          name: 'legend',
+          type: 'string',
+          advanced: true,
+          write: function () {}
         }
       ]
     });

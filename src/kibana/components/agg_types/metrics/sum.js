@@ -6,12 +6,18 @@ define(function (require) {
       name: 'sum',
       title: 'Sum',
       makeLabel: function (aggConfig) {
-        return 'Sum of ' + aggConfig.params.field.displayName;
+        return aggConfig.params.legend || 'Sum of ' + aggConfig.params.field.displayName;
       },
       params: [
         {
           name: 'field',
           filterFieldTypes: 'number'
+        },
+        {
+          name: 'legend',
+          type: 'string',
+          advanced: true,
+          write: function () {}
         }
       ]
     });

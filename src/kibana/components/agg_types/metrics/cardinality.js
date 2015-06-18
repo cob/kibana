@@ -7,7 +7,7 @@ define(function (require) {
       name: 'cardinality',
       title: 'Unique Count',
       makeLabel: function (aggConfig) {
-        return 'Unique count of ' + aggConfig.params.field.displayName;
+        return aggConfig.params.legend || 'Unique count of ' + aggConfig.params.field.displayName;
       },
       getFormat: function () {
         return fieldFormats.getDefaultInstance('number');
@@ -15,6 +15,12 @@ define(function (require) {
       params: [
         {
           name: 'field'
+        },
+        {
+          name: 'legend',
+          type: 'string',
+          advanced: true,
+          write: function () {}
         }
       ]
     });
