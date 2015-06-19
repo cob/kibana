@@ -33,7 +33,7 @@ define(function (require) {
       makeLabel: function (agg) {
         var output = this.params.write(agg);
         var params = output.params;
-        return params.field + ' per ' + (output.metricScaleText || output.bucketInterval.description);
+        return agg.params.legend || params.field + ' per ' + (output.metricScaleText || output.bucketInterval.description);
       },
       createFilter: createFilter,
       decorateAggConfig: function () {
@@ -148,6 +148,13 @@ define(function (require) {
               };
             }
           }
+        },
+
+        {
+          name: 'legend',
+          type: 'string',
+          advanced: true,
+          write: function () {}
         }
       ]
     });

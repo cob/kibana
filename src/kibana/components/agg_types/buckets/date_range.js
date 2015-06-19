@@ -21,7 +21,7 @@ define(function (require) {
         return fieldFormats.getDefaultInstance('string');
       },
       makeLabel: function (aggConfig) {
-        return aggConfig.params.field.displayName + ' date ranges';
+        return aggConfig.params.legend || aggConfig.params.field.displayName + ' date ranges';
       },
       params: [{
         name: 'field',
@@ -36,6 +36,13 @@ define(function (require) {
           to: 'now'
         }],
         editor: require('text!components/agg_types/controls/date_ranges.html')
+      },
+
+      {
+        name: 'legend',
+        type: 'string',
+        advanced: true,
+        write: function () {}
       }]
     });
   };

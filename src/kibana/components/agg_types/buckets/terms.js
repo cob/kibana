@@ -28,7 +28,7 @@ define(function (require) {
       title: 'Terms',
       makeLabel: function (agg) {
         var params = agg.params;
-        return params.order.display + ' ' + params.size + ' ' + params.field.displayName;
+        return params.legend || params.order.display + ' ' + params.size + ' ' + params.field.displayName;
       },
       createFilter: createFilter,
       params: [
@@ -159,6 +159,13 @@ define(function (require) {
             output.subAggs = (output.subAggs || []).concat(orderAgg);
             order[orderAggId] = dir;
           }
+        },
+
+        {
+          name: 'legend',
+          type: 'string',
+          advanced: true,
+          write: function () {}
         }
       ]
     });

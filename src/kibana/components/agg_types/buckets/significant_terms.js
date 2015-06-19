@@ -8,7 +8,7 @@ define(function (require) {
       name: 'significant_terms',
       title: 'Significant Terms',
       makeLabel: function (aggConfig) {
-        return 'Top ' + aggConfig.params.size + ' unusual terms in ' + aggConfig.params.field.displayName;
+        return aggConfig.params.legend || 'Top ' + aggConfig.params.size + ' unusual terms in ' + aggConfig.params.field.displayName;
       },
       createFilter: createFilter,
       params: [
@@ -29,6 +29,13 @@ define(function (require) {
           name: 'include',
           type: 'regex',
           advanced: true
+        },
+
+        {
+          name: 'legend',
+          type: 'string',
+          advanced: true,
+          write: function () {}
         }
       ]
     });

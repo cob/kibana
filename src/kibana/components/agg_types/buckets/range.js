@@ -10,7 +10,7 @@ define(function (require) {
       title: 'Range',
       createFilter: createFilter,
       makeLabel: function (aggConfig) {
-        return aggConfig.params.field.displayName + ' ranges';
+        return aggConfig.params.legend || aggConfig.params.field.displayName + ' ranges';
       },
       getKey: function (bucket, key, agg) {
         var id = 'from:' + bucket.from + ',to:' + bucket.to;
@@ -53,6 +53,13 @@ define(function (require) {
             output.params.ranges = aggConfig.params.ranges;
             output.params.keyed = true;
           }
+        },
+
+        {
+          name: 'legend',
+          type: 'string',
+          advanced: true,
+          write: function () {}
         }
       ]
     });
