@@ -12,7 +12,7 @@ define(function (require) {
       title: 'Histogram',
       ordered: {},
       makeLabel: function (aggConfig) {
-        return aggConfig.params.field.displayName;
+        return aggConfig.params.legend || aggConfig.params.field.displayName;
       },
       createFilter: createFilter,
       params: [
@@ -65,6 +65,13 @@ define(function (require) {
               return aggConfig.params.min_doc_count;
             }
           }
+        },
+
+        {
+          name: 'legend',
+          type: 'string',
+          advanced: true,
+          write: function () {}
         }
       ]
     });

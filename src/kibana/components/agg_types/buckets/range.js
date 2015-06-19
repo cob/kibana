@@ -11,7 +11,7 @@ define(function (require) {
       title: 'Range',
       createFilter: createFilter,
       makeLabel: function (aggConfig) {
-        return aggConfig.params.field.displayName + ' ranges';
+        return aggConfig.params.legend || aggConfig.params.field.displayName + ' ranges';
       },
       params: [
         {
@@ -29,6 +29,13 @@ define(function (require) {
             output.params.ranges = aggConfig.params.ranges;
             output.params.keyed = true;
           }
+        },
+
+        {
+          name: 'legend',
+          type: 'string',
+          advanced: true,
+          write: function () {}
         }
       ]
     });
