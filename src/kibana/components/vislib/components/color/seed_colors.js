@@ -8,13 +8,13 @@ define(function () {
 
   return function SeedColorUtilService() {
     return [
-      '#57c17b',
+      '#daa05d',
       '#006e8a',
+      '#57c17b',
       '#6f87d8',
       '#663db8',
       '#bc52bc',
-      '#9e3533',
-      '#daa05d'
+      '#9e3533'
     ];
   };
 });
