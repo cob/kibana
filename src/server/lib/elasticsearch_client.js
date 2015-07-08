@@ -21,8 +21,22 @@ if (config.kibana.ca) {
   ssl.ca = fs.readFileSync(config.kibana.ca, 'utf8');
 }
 
+var host;
+if (config.kibana.cobtoken) {
+  host = {
+    host: uri.hostname,
+    port: uri.port,
+    protocol: uri.protocol,
+    headers: {
+      'Cookie': 'cobtoken=' + config.kibana.cobtoken
+    }
+  };
+} else {
+  host = url.format(uri);
+}
+
 module.exports = new elasticsearch.Client({
-  host: url.format(uri),
+  host: host,
   ssl: ssl,
   pingTimeout: config.ping_timeout,
   log: function (config) {
