@@ -7,7 +7,8 @@ define(function (require) {
     var createFilter = Private(require('components/agg_types/buckets/create_filter/date_histogram'));
     var intervalOptions = Private(require('components/agg_types/buckets/_interval_options'));
 
-    var tzOffset = moment().format('Z');
+    //var tzOffset = moment().format('Z');
+    var tzOffset = '+00:00';
 
     function getInterval(agg) {
       var interval = _.get(agg, ['params', 'interval']);
