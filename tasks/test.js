@@ -7,7 +7,6 @@ module.exports = function (grunt) {
     }
 
     var tasks = [
-      'licenses',
       'jshint:source',
       'jscs:source',
       'maybe_start_kibana',
