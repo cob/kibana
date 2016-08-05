@@ -38,6 +38,8 @@ let legacySettingMap = {
   tilemap_attribution: 'tilemap.options.attribution',
   tilemap_subdomains: 'tilemap.options.subdomains',
   verify_ssl: 'elasticsearch.ssl.verify',
+
+  cobtoken: 'elasticsearch.cobtoken',
 };
 
 const deprecatedSettings = {

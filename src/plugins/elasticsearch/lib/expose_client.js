@@ -40,8 +40,23 @@ module.exports = function (server) {
       ssl.ca = options.ca.map(readFile);
     }
 
+    let cobtoken = config.get('elasticsearch.cobtoken');
+    let host;
+    if (cobtoken) {
+      host = {
+        host: uri.hostname,
+        port: uri.port,
+        protocol: uri.protocol,
+        headers: {
+          'Cookie': 'cobtoken=' + cobtoken
+        }
+      };
+    } else {
+      host = url.format(uri);
+    }
+
     return new elasticsearch.Client({
-      host: url.format(uri),
+      host: host,
       ssl: ssl,
       plugins: options.plugins,
       apiVersion: options.apiVersion,
