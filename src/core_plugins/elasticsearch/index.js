@@ -33,6 +33,7 @@ module.exports = function (kibana) {
         preserveHost: boolean().default(true),
         username: string(),
         password: string(),
+        cobtoken: string(),
         shardTimeout: number().default(0),
         requestTimeout: number().default(30000),
         requestHeadersWhitelist: array().items().single().default(DEFAULT_REQUEST_HEADERS),

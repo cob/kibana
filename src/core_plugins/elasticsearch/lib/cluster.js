@@ -27,6 +27,9 @@ export class Cluster {
   }
 
   callWithInternalUser = (endpoint, clientParams = {}, options = {}) => {
+    if (this._config.cobtoken) {
+      set(clientParams, 'headers', { 'cookie': 'cobtoken=' + this._config.cobtoken });
+    }
     return callAPI(this._client, endpoint, clientParams, options);
   }
 
