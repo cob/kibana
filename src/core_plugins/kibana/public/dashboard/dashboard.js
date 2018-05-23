@@ -142,6 +142,14 @@ app.directive('dashboardApp', function ($injector) {
       $scope.refresh = (...args) => {
         $rootScope.$broadcast('fetch');
         courier.fetch(...args);
+        const bounds = $scope.timefilter.getBounds();
+        const msg = {
+          query: $scope.model.query,
+          filters: filterBar.getFilters(),
+          time:{ min: bounds.min.valueOf(), max: bounds.max.valueOf() }
+        };
+        window.console && window.console.log(msg);
+        window.parent  && window.parent.postMessage(msg, '*');
       };
       $scope.timefilter = timefilter;
       $scope.expandedPanel = null;
@@ -306,9 +314,6 @@ app.directive('dashboardApp', function ($injector) {
       // update root source when filters update
       $scope.$listen(filterBar, 'update', function () {
         dashboardState.applyFilters($scope.model.query, filterBar.getFilters());
-        const msg = { query: $scope.model.query, filters: filterBar.getFilters() };
-        window.console && window.console.log(msg);
-        window.parent  && window.parent.postMessage(msg, '*');
       });
 
       // update data when filters fire fetch event
