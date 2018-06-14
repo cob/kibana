@@ -319,8 +319,18 @@ app.directive('dashboardApp', function ($injector) {
       // update data when filters fire fetch event
       $scope.$listen(filterBar, 'fetch', $scope.refresh);
 
+
+      function receiveExternalQuery(event) {
+        if (!event.data || !event.data.query) return;
+        $scope.model.query = event.data.query;
+        $scope.filterResults();
+      }
+      window.addEventListener('message', receiveExternalQuery, false);
+
       $scope.$on('$destroy', () => {
         dashboardState.destroy();
+
+        window.removeEventListener('message', receiveExternalQuery);
 
         // Remove dark theme to keep it from affecting the appearance of other apps.
         setLightTheme();
