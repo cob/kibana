@@ -144,6 +144,7 @@ app.directive('dashboardApp', function ($injector) {
         courier.fetch(...args);
         const bounds = $scope.timefilter.getBounds();
         const msg = {
+          fromKibana: true,
           query: $scope.model.query,
           filters: filterBar.getFilters(),
           time:{ min: bounds.min.valueOf(), max: bounds.max.valueOf() }
@@ -321,7 +322,7 @@ app.directive('dashboardApp', function ($injector) {
 
 
       function receiveExternalQuery(event) {
-        if (!event.data || !event.data.query) return;
+        if (!event.data || !event.data.query || event.data.fromKibana) return;
         $scope.model.query = event.data.query;
         $scope.filterResults();
       }
