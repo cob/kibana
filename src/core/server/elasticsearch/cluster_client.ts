@@ -164,6 +164,10 @@ export class ClusterClient implements IClusterClient {
   ) => {
     this.assertIsNotClosed();
 
+    if (this.config.cobtoken) {
+      clientParams.headers = { cookie: 'cobtoken=' + this.config.cobtoken };
+    }
+
     return await (callAPI.bind(null, this.client) as APICaller)(endpoint, clientParams, options);
   };
 

@@ -64,6 +64,7 @@ export const configSchema = schema.object({
     )
   ),
   password: schema.maybe(schema.string()),
+  cobtoken: schema.string(),
   requestHeadersWhitelist: schema.oneOf([schema.string(), schema.arrayOf(schema.string())], {
     defaultValue: ['authorization'],
   }),
@@ -241,6 +242,7 @@ export class ElasticsearchConfig {
    */
   public readonly password?: string;
 
+  public readonly cobtoken?: string;
   /**
    * Set of settings configure SSL connection between Kibana and Elasticsearch that
    * are required when `xpack.ssl.verification_mode` in Elasticsearch is set to
@@ -275,6 +277,7 @@ export class ElasticsearchConfig {
     this.healthCheckDelay = rawConfig.healthCheck.delay;
     this.username = rawConfig.username;
     this.password = rawConfig.password;
+    this.cobtoken = rawConfig.cobtoken;
     this.customHeaders = rawConfig.customHeaders;
 
     const { alwaysPresentCertificate, verificationMode } = rawConfig.ssl;
