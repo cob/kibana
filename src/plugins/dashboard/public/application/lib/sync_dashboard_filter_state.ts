@@ -61,6 +61,24 @@ export const syncDashboardFilterState = ({
     savedDashboard.searchSource.setField('query', query);
     savedDashboard.searchSource.setField('filter', filters);
     dispatchDashboardStateChange(setQuery(query));
+
+    // COB query / filter updates
+    const bounds = timefilter.timefilter.getTime();
+    const msg = {
+      fromKibana: true,
+      query,
+      filters: filters.map((f) => ({
+        // because meta has functions that can't be directly posted
+        meta: JSON.parse(JSON.stringify(f.meta)),
+        query: f.query,
+      })),
+      time: { min: bounds.from.valueOf(), max: bounds.to.valueOf() },
+    };
+    // window.console.debug('JN', timefilter);
+    // window.console.debug('JN', timefilter.timefilter);
+    // window.console.debug('JN', bounds, bounds.from);
+    window.console.debug('COB', 'applyFilters', msg);
+    if (window.parent !== window) window.parent.postMessage(msg, '*');
   };
 
   // starts syncing `_g` portion of url with query services
@@ -109,6 +127,24 @@ export const syncDashboardFilterState = ({
     // manually check for unsaved changes here because the time range is not stored on the dashboardState,
     // but it could trigger the unsaved changes badge.
     $checkForUnsavedChanges.next();
+
+    // COB: time filter updates
+    const bounds = timefilter.timefilter.getTime();
+    const msg = {
+      fromKibana: true,
+      query: queryString.getQuery(),
+      filters: filterManager.getFilters().map((f: Filter) => ({
+        // because meta has functions that can't be directly posted
+        meta: JSON.parse(JSON.stringify(f.meta)),
+        query: f.query,
+      })),
+      time: { min: bounds.from.valueOf(), max: bounds.to.valueOf() },
+    };
+    // window.console.debug('JN', timefilter);
+    // window.console.debug('JN', timefilter.timefilter);
+    // window.console.debug('JN', bounds, bounds.from);
+    window.console.debug('COB', 'timeRefreshSubscription', msg);
+    if (window.parent !== window) window.parent.postMessage(msg, '*');
   });
 
   const forceRefreshSubscription = timefilterService

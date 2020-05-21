@@ -41,6 +41,10 @@ export const configureClient = (
         // rewrites headers['x-opaque-id'] if it presents
         opts.opaqueId = opaqueId;
       }
+      if (!scoped && config.cobtoken) {
+        opts.headers = opts.headers ?? {};
+        opts.headers.cookie = 'cobtoken=' + config.cobtoken;
+      }
       return super.request(params, opts);
     }
   }

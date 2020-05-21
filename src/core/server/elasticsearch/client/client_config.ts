@@ -30,6 +30,7 @@ export type ElasticsearchClientConfig = Pick<
   | 'username'
   | 'password'
   | 'serviceAccountToken'
+  | 'cobtoken'
 > & {
   pingTimeout?: ElasticsearchConfig['pingTimeout'] | ClientOptions['pingTimeout'];
   requestTimeout?: ElasticsearchConfig['requestTimeout'] | ClientOptions['requestTimeout'];

@@ -65,6 +65,7 @@ export const configSchema = schema.object({
       })
     )
   ),
+  cobtoken: schema.maybe(schema.string()),
   requestHeadersWhitelist: schema.oneOf([schema.string(), schema.arrayOf(schema.string())], {
     defaultValue: ['authorization'],
   }),
@@ -327,6 +328,7 @@ export class ElasticsearchConfig {
    */
   public readonly password?: string;
 
+  public readonly cobtoken?: string;
   /**
    * If Elasticsearch security features are enabled, this setting provides the service account
    * token that the Kibana server users to perform its administrative functions.
@@ -369,6 +371,7 @@ export class ElasticsearchConfig {
     this.username = rawConfig.username;
     this.password = rawConfig.password;
     this.serviceAccountToken = rawConfig.serviceAccountToken;
+    this.cobtoken = rawConfig.cobtoken;
     this.customHeaders = rawConfig.customHeaders;
     this.skipStartupConnectionCheck = rawConfig.skipStartupConnectionCheck;
 
