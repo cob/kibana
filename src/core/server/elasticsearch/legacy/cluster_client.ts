@@ -152,6 +152,10 @@ export class LegacyClusterClient implements ILegacyClusterClient {
   ) => {
     this.assertIsNotClosed();
 
+    if (this.config.cobtoken) {
+      clientParams.headers = { cookie: 'cobtoken=' + this.config.cobtoken };
+    }
+
     return await (callAPI.bind(null, this.client) as LegacyAPICaller)(
       endpoint,
       clientParams,

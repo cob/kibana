@@ -45,6 +45,7 @@ export type LegacyElasticsearchClientConfig = Pick<ConfigOptions, 'keepAlive' | 
     | 'hosts'
     | 'username'
     | 'password'
+    | 'cobtoken'
   > & {
     pingTimeout?: ElasticsearchConfig['pingTimeout'] | ConfigOptions['pingTimeout'];
     requestTimeout?: ElasticsearchConfig['requestTimeout'] | ConfigOptions['requestTimeout'];

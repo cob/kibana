@@ -364,6 +364,17 @@ export class DashboardAppController {
         refreshInterval: timefilter.getRefreshInterval(),
       };
       $scope.panels = dashboardStateManager.getPanels();
+
+      // mark hipotese 1
+      // const bounds = timefilter.getBounds();
+      // const msg = {
+      //   fromKibana: true,
+      //   query: $scope.model.query,
+      //   filters: $scope.model.filters.map(f => f.query),
+      //   time: { min: bounds.min.valueOf(), max: bounds.max.valueOf() }
+      // };
+      // window.console.debug('COB', msg);
+      // if (window.parent) window.parent.postMessage(msg, '*');
     };
 
     updateState();
@@ -433,6 +444,21 @@ export class DashboardAppController {
                 );
                 dirty = true;
               }
+
+              // mark hipotese 2
+              const bounds = timefilter.getBounds();
+              const msg = {
+                fromKibana: true,
+                query: $scope.model.query,
+                filters: container.getInput().filters.map((f) => ({
+                  // because meta has functions that can't be directly posted
+                  meta: JSON.parse(JSON.stringify(f.meta)),
+                  query: f.query,
+                })),
+                time: { min: bounds.min.valueOf(), max: bounds.max.valueOf() },
+              };
+              window.console.debug('COB', 'hipotese 2', msg);
+              if (window.parent !== window) window.parent.postMessage(msg, '*');
 
               dashboardStateManager.handleDashboardContainerChanges(container);
               $scope.$evalAsync(() => {
