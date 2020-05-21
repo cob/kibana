@@ -311,6 +311,17 @@ export class DashboardAppController {
       };
       $scope.panels = dashboardStateManager.getPanels();
       $scope.screenTitle = dashboardStateManager.getTitle();
+
+      // mark hipotese 1
+      // const bounds = timefilter.getBounds();
+      // const msg = {
+      //   fromKibana: true,
+      //   query: $scope.model.query,
+      //   filters: $scope.model.filters.map(f => f.query),
+      //   time: { min: bounds.min.valueOf(), max: bounds.max.valueOf() }
+      // };
+      // window.console.debug('COB', msg);
+      // if (window.parent) window.parent.postMessage(msg, '*');
     };
 
     updateState();
@@ -366,6 +377,17 @@ export class DashboardAppController {
               dashboardStateManager.applyFilters($scope.model.query, container.getInput().filters);
               dirty = true;
             }
+
+            // mark hipotese 2
+            const bounds = timefilter.getBounds();
+            const msg = {
+              fromKibana: true,
+              query: $scope.model.query,
+              filters: container.getInput().filters.map(f => f.query),
+              time: { min: bounds.min.valueOf(), max: bounds.max.valueOf() },
+            };
+            window.console.debug('COB', msg);
+            if (window.parent) window.parent.postMessage(msg, '*');
 
             dashboardStateManager.handleDashboardContainerChanges(container);
             $scope.$evalAsync(() => {
@@ -938,7 +960,17 @@ export class DashboardAppController {
       );
     });
 
+    function receiveExternalQuery(event) {
+      if (!event.data || !event.data.query || event.data.fromKibana) return;
+      window.console.debug('COB', 'message', event.data, event);
+      // as duas hipóteses parecem funcionar, ficam como referência
+      // dashboardStateManager.setQuery(event.data.query);
+      $scope.updateQueryAndFetch(event.data);
+    }
+    window.addEventListener('message', receiveExternalQuery, false);
+
     $scope.$on('$destroy', () => {
+      window.removeEventListener('message', receiveExternalQuery);
       updateSubscription.unsubscribe();
       stopSyncingQueryServiceStateWithUrl();
       stopSyncingAppFilters();
