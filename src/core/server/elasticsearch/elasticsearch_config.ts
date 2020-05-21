@@ -64,7 +64,7 @@ export const configSchema = schema.object({
     )
   ),
   password: schema.maybe(schema.string()),
-  cobtoken: schema.string(),
+  cobtoken: schema.maybe(schema.string()),
   requestHeadersWhitelist: schema.oneOf([schema.string(), schema.arrayOf(schema.string())], {
     defaultValue: ['authorization'],
   }),
