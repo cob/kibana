@@ -340,6 +340,40 @@ class SearchBarUI extends Component<SearchBarProps, State> {
     }
   };
 
+  private receiveExternalQuery(event: any) {
+    if (!event.data || !event.data.query || event.data.fromKibana) return;
+    window.console.debug('COB', 'receiveExternalQuery', event.data, event);
+
+    if (event.data.query.language) {
+      // new format
+      this.onQueryBarSubmit({
+        query: event.data.query,
+      });
+    } else if (event.data.query.query_string) {
+      // old format
+      const updated = { language: 'lucene', query: event.data.query.query_string.query };
+      window.console.warn(
+        'COB',
+        'receiveExternalQuery',
+        'outdated format, please convert to: ',
+        updated
+      );
+      this.onQueryBarSubmit({
+        query: updated,
+      });
+    }
+  }
+  private boundReceiveExternalQuery: any;
+
+  public componentDidMount() {
+    this.boundReceiveExternalQuery = this.receiveExternalQuery.bind(this);
+    if(typeof window !== 'undefined') window.addEventListener('message', this.boundReceiveExternalQuery, false);
+  }
+
+  public componentWillUnmount() {
+    window.removeEventListener('message', this.boundReceiveExternalQuery);
+  }
+
   public render() {
     const savedQueryManagement = this.state.query && this.props.onClearSavedQuery && (
       <SavedQueryManagementComponent
