@@ -450,11 +450,11 @@ export class DashboardAppController {
               const msg = {
                 fromKibana: true,
                 query: $scope.model.query,
-                filters: container.getInput().filters.map(f => f.query),
+                filters: container.getInput().filters.map((f) => f.query),
                 time: { min: bounds.min.valueOf(), max: bounds.max.valueOf() },
               };
-              window.console.debug('COB', msg);
-              if (window.parent) window.parent.postMessage(msg, '*');
+              window.console.debug('COB', 'hipotese 2', msg);
+              if (window.parent !== window) window.parent.postMessage(msg, '*');
 
               dashboardStateManager.handleDashboardContainerChanges(container);
               $scope.$evalAsync(() => {
