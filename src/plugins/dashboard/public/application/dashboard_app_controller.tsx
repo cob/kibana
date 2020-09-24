@@ -450,7 +450,9 @@ export class DashboardAppController {
               const msg = {
                 fromKibana: true,
                 query: $scope.model.query,
-                filters: container.getInput().filters.map((f) => f.query),
+                filters: container
+                  .getInput()
+                  .filters.map((f) => ({ meta: f.meta, query: f.query })),
                 time: { min: bounds.min.valueOf(), max: bounds.max.valueOf() },
               };
               window.console.debug('COB', 'hipotese 2', msg);
