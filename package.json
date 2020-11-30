@@ -127,7 +127,7 @@
     "@elastic/eui": "26.3.3",
     "@elastic/filesaver": "1.1.2",
     "@elastic/good": "8.1.1-kibana2",
-    "@elastic/numeral": "^2.5.0",
+    "@cob/numeral": "^2.5.1",
     "@elastic/request-crypto": "1.1.4",
     "@elastic/safer-lodash-set": "0.0.0",
     "@elastic/ui-ace": "0.2.3",
