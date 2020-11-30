@@ -38,4 +38,10 @@ describe('NumberFormat', () => {
 
     expect(formatter.convert('12.345678')).toBe('12');
   });
+
+  test('scientific notation', () => {
+    const formatter = new NumberFormat({ pattern: '0,0' }, getConfig);
+
+    expect(formatter.convert('7.9e-8')).toBe('0');
+  });
 });
