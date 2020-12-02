@@ -18,9 +18,9 @@
  */
 
 // @ts-ignore
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 // @ts-ignore
-import numeralLanguages from '@elastic/numeral/languages';
+import numeralLanguages from '@cob/numeral/languages';
 import { KBN_FIELD_TYPES } from '../../kbn_field_types/types';
 import { FieldFormat } from '../field_format';
 import { TextContextTypeConvert } from '../types';

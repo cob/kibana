@@ -21,7 +21,7 @@ import { i18n } from '@kbn/i18n';
 import { schema } from '@kbn/config-schema';
 import { UiSettingsParams } from 'kibana/server';
 // @ts-ignore untyped module
-import numeralLanguages from '@elastic/numeral/languages';
+import numeralLanguages from '@cob/numeral/languages';
 import { DEFAULT_QUERY_LANGUAGE, UI_SETTINGS } from '../common';
 
 const luceneQueryLanguageLabel = i18n.translate('data.advancedSettings.searchQueryLanguageLucene', {
