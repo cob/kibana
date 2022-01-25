@@ -5,7 +5,7 @@
  * 2.0.
  */
 
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 import { Stat } from '../typings';
 
 export function formatStatValue(stat: Stat) {

@@ -6,7 +6,7 @@
  */
 
 import { get } from 'lodash/fp';
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 import React from 'react';
 
 import { CountryFlag } from '../source_destination/country_flag';

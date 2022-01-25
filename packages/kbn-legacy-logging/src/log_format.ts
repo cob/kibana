@@ -10,7 +10,7 @@ import Stream from 'stream';
 import moment from 'moment-timezone';
 import _ from 'lodash';
 import queryString from 'query-string';
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 import chalk from 'chalk';
 import { inspect } from 'util';
 

@@ -6,7 +6,7 @@
  */
 
 import { EuiFlexGroup, EuiFlexItem, EuiText } from '@elastic/eui';
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 import React from 'react';
 import styled from 'styled-components';
 

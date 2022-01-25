@@ -6,7 +6,7 @@
  */
 
 // @ts-ignore
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 
 /**
  * Formats the supplied number as ordinal e.g. 15 as 15th.

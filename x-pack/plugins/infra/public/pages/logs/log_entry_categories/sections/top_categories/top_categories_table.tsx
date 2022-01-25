@@ -6,7 +6,7 @@
  */
 
 import { EuiBasicTable, EuiBasicTableColumn } from '@elastic/eui';
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 import { i18n } from '@kbn/i18n';
 import React, { useMemo, useCallback } from 'react';
 import useSet from 'react-use/lib/useSet';

@@ -6,7 +6,7 @@
  */
 
 import React from 'react';
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 import {
   NetworkHttpEdges,
   NetworkHttpFields,

@@ -7,7 +7,7 @@
 
 import { isEmpty } from 'lodash/fp';
 import React, { useCallback } from 'react';
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 
 import { EuiFlexGroup, EuiFlexItem, EuiCheckbox } from '@elastic/eui';
 import styled from 'styled-components';

@@ -7,7 +7,7 @@
 
 import React from 'react';
 import { EuiFlexItem, EuiStat, EuiFlexGroup, EuiIconTip } from '@elastic/eui';
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 import {
   DATA_UNDEFINED_LABEL,
   FCP_LABEL,

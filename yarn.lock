@@ -1340,6 +1340,11 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
+"@cob/numeral@^2.5.3":
+  version "2.5.3"
+  resolved "https://registry.yarnpkg.com/@cob/numeral/-/numeral-2.5.3.tgz#bcbef494adce98d1aa9ede96ef3b4cb669375c8c"
+  integrity sha512-EPehXwaTrL4VY7Dc2iFQnuzjysJyj/Y/4w3oQitnMN9EArWL2bmcSuUQ27fqJnNSlg0rV4psOMiwFedbYoyEjw==
+
 "@cspotcode/source-map-consumer@0.8.0":
   version "0.8.0"
   resolved "https://registry.yarnpkg.com/@cspotcode/source-map-consumer/-/source-map-consumer-0.8.0.tgz#33bf4b7b39c178821606f669bbc447a6a629786b"
@@ -1693,11 +1698,6 @@
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/@elastic/node-crypto/-/node-crypto-1.2.1.tgz#dfd9218f9b5729fa519762e6a6968aaf61b86eb0"
   integrity sha512-RlZg+poLA2SwZZUM5RMJDJiKojlSB1mJkumIvLgXvvTCcCliC6rM0lUaNecV9pbQLIHrGlX2BrbwiuPWhv0czQ==
-
-"@elastic/numeral@^2.5.1":
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/@elastic/numeral/-/numeral-2.5.1.tgz#96acf39c3d599950646ef8ccfd24a3f057cf4932"
-  integrity sha512-Tby6TKjixRFY+atVNeYUdGr9m0iaOq8230KTwn8BbUhkh7LwozfgKq0U98HRX7n63ZL62szl+cDKTYzh5WPCFQ==
 
 "@elastic/react-search-ui-views@1.6.0":
   version "1.6.0"

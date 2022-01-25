@@ -18,7 +18,7 @@ import {
   EuiSpacer,
   EuiTabbedContent,
 } from '@elastic/eui';
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 import React, { Fragment, ReactNode } from 'react';
 import styled from 'styled-components';
 

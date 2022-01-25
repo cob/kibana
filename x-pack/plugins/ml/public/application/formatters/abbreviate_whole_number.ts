@@ -10,7 +10,7 @@
  * Uses numeral.js to format numbers longer than the specified number of
  * digits with metric abbreviations e.g. 12345 as 12k, or 98000000 as 98m.
  */
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 
 export function abbreviateWholeNumber(value: number, maxDigits = 3) {
   if (Math.abs(value) < Math.pow(10, maxDigits)) {

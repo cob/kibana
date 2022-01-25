@@ -7,7 +7,7 @@
 
 import type { Position } from '@elastic/charts';
 import { EuiFlexGroup, EuiFlexItem, EuiTitleSize } from '@elastic/eui';
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 import React, { memo, useCallback, useMemo, useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { isEmpty } from 'lodash/fp';

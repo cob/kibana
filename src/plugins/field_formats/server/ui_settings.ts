@@ -10,7 +10,7 @@ import { i18n } from '@kbn/i18n';
 import { schema } from '@kbn/config-schema';
 import { UiSettingsParams } from 'kibana/server';
 // @ts-ignore untyped module
-import numeralLanguages from '@elastic/numeral/languages';
+import numeralLanguages from '@cob/numeral/languages';
 import { FORMATS_UI_SETTINGS } from '../common';
 
 // We add the `en` key manually here, since that's not a real numeral locale, but the

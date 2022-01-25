@@ -9,7 +9,7 @@ import React, { useMemo } from 'react';
 import styled from 'styled-components';
 
 import { EuiStat, EuiFlexItem, EuiFlexGroup, EuiToolTip } from '@elastic/eui';
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 import { DEFAULT_NUMBER_FORMAT } from '../../../../../common/constants';
 import { useUiSetting$ } from '../../../../common/lib/kibana';
 import { TimelineKpiStrategyResponse } from '../../../../../common/search_strategy';

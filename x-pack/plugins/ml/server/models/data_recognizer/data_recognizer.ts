@@ -7,7 +7,7 @@
 
 import fs from 'fs';
 import Boom from '@hapi/boom';
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 import type {
   KibanaRequest,
   IScopedClusterClient,

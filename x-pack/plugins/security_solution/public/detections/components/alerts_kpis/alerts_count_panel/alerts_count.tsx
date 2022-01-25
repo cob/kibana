@@ -8,7 +8,7 @@
 import { EuiProgress, EuiBasicTableColumn, EuiInMemoryTable } from '@elastic/eui';
 import React, { memo, useMemo } from 'react';
 import styled from 'styled-components';
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 import { useUiSetting$ } from '../../../../common/lib/kibana';
 import { DEFAULT_NUMBER_FORMAT } from '../../../../../common/constants';
 import * as i18n from './translations';

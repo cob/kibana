@@ -10,7 +10,7 @@ import semverGte from 'semver/functions/gte';
 import moment, { Duration } from 'moment';
 import { estypes } from '@elastic/elasticsearch';
 // @ts-ignore
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 import { i18n } from '@kbn/i18n';
 import { ALLOWED_DATA_UNITS, JOB_ID_MAX_LENGTH } from '../constants/validation';
 import { parseInterval } from './parse_interval';

@@ -6,7 +6,7 @@
  * Side Public License, v 1.
  */
 
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 
 export type DataType = 'byte' | 'float' | 'integer' | 'time';
 

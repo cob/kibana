@@ -7,7 +7,7 @@
 
 import moment from 'moment';
 import 'moment-duration-format';
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 import { i18n } from '@kbn/i18n';
 
 export function formatBytesUsage(used, max) {

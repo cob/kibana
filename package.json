@@ -93,6 +93,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.16.3",
+    "@cob/numeral": "^2.5.3",
     "@dnd-kit/core": "^3.1.1",
     "@dnd-kit/sortable": "^4.0.0",
     "@dnd-kit/utilities": "^2.0.0",
@@ -108,7 +109,6 @@
     "@elastic/good": "^9.0.1-kibana3",
     "@elastic/maki": "6.3.0",
     "@elastic/node-crypto": "1.2.1",
-    "@elastic/numeral": "^2.5.1",
     "@elastic/react-search-ui": "^1.6.0",
     "@elastic/request-crypto": "1.1.4",
     "@elastic/safer-lodash-set": "link:bazel-bin/packages/elastic-safer-lodash-set",
