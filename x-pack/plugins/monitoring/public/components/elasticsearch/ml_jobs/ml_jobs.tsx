@@ -6,7 +6,7 @@
  */
 
 import { capitalize } from 'lodash';
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 import React from 'react';
 import {
   EuiLink,

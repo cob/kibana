@@ -6,7 +6,7 @@
  */
 
 import { get, forEach, last } from 'lodash';
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 
 export function getUnits(series) {
   let units = get(series, '[0].metric.units');

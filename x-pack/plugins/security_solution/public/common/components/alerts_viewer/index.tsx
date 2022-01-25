@@ -6,7 +6,7 @@
  */
 
 import React, { useEffect, useCallback, useMemo } from 'react';
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 
 import { DEFAULT_NUMBER_FORMAT } from '../../../../common/constants';
 import { useGlobalFullScreen } from '../../containers/use_full_screen';

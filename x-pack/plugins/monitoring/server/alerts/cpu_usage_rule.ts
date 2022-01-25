@@ -6,7 +6,7 @@
  */
 
 import { i18n } from '@kbn/i18n';
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 import { ElasticsearchClient } from 'kibana/server';
 import { BaseRule } from './base_rule';
 import {

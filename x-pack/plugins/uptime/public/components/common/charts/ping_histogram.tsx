@@ -20,7 +20,7 @@ import { EuiTitle, EuiFlexGroup, EuiFlexItem, EuiButton } from '@elastic/eui';
 import { i18n } from '@kbn/i18n';
 import React, { useContext } from 'react';
 import { FormattedMessage } from '@kbn/i18n/react';
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 import moment from 'moment';
 import { useSelector } from 'react-redux';
 import { getChartDateLabel } from '../../../lib/helper';

@@ -10,7 +10,7 @@ import { Buffer } from 'buffer';
 import { stringify } from 'querystring';
 import { errors, Client, ApiError, RequestEvent } from '@elastic/elasticsearch';
 import { RequestBody } from '@elastic/elasticsearch/lib/Transport';
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 import { getEcsResponseLog } from './get_ecs_response_log';
 import { Logger } from '../../logging';
 

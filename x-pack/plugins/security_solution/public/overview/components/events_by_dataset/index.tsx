@@ -6,7 +6,7 @@
  */
 
 import { Position } from '@elastic/charts';
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 import React, { useEffect, useMemo, useCallback } from 'react';
 import uuid from 'uuid';
 

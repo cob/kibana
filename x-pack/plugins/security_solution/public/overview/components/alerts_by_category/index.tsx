@@ -5,7 +5,7 @@
  * 2.0.
  */
 
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 import React, { useEffect, useMemo, useCallback } from 'react';
 import { Position } from '@elastic/charts';
 

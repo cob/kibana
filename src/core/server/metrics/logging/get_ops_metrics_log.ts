@@ -6,7 +6,7 @@
  * Side Public License, v 1.
  */
 
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 import { LogMeta } from '@kbn/logging';
 import { OpsMetrics } from '..';
 

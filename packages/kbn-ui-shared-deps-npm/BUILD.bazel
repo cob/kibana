@@ -32,7 +32,7 @@ RUNTIME_DEPS = [
   "@npm//@babel/runtime",
   "@npm//@elastic/charts",
   "@npm//@elastic/eui",
-  "@npm//@elastic/numeral",
+  "@npm//@cob/numeral",
   "@npm//@emotion/react",
   "@npm//abortcontroller-polyfill",
   "@npm//babel-loader",
@@ -71,7 +71,7 @@ WEBPACK_DEPS = [
 TYPES_DEPS = [
   "@npm//@elastic/charts",
   "@npm//@elastic/eui",
-  "@npm//@elastic/numeral",
+  "@npm//@cob/numeral",
   "@npm//@emotion/react",
   "@npm//abortcontroller-polyfill",
   "@npm//babel-loader",

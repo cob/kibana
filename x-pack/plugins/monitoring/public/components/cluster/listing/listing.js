@@ -8,7 +8,7 @@
 import React, { Fragment, Component } from 'react';
 import { Legacy } from '../../../legacy_shims';
 import moment from 'moment';
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 import { capitalize, partial } from 'lodash';
 import {
   EuiHealth,

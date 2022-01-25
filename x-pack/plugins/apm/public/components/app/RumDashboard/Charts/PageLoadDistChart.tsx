@@ -6,7 +6,7 @@
  */
 
 import React, { useState } from 'react';
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 import {
   Axis,
   BrushEndListener,

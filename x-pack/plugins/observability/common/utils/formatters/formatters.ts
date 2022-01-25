@@ -5,7 +5,7 @@
  * 2.0.
  */
 
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 import { Maybe } from '../../typings';
 import { NOT_AVAILABLE_LABEL } from '../../i18n';
 import { isFiniteNumber } from '../is_finite_number';

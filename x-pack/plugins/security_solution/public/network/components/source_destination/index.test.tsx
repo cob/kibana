@@ -5,7 +5,7 @@
  * 2.0.
  */
 
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 import { shallow } from 'enzyme';
 import { get } from 'lodash/fp';
 import React from 'react';

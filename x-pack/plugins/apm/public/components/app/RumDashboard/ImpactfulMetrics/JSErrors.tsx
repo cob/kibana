@@ -15,7 +15,7 @@ import {
   EuiStat,
   EuiToolTip,
 } from '@elastic/eui';
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 import { i18n } from '@kbn/i18n';
 import { FormattedMessage } from '@kbn/i18n/react';
 import { useUrlParams } from '../../../../context/url_params_context/use_url_params';

@@ -7,7 +7,7 @@
  */
 
 // @ts-ignore
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 import { getFormatService } from '../services';
 
 export function getValueForPercentageMode(value: string | number, percentageFormatPattern: string) {

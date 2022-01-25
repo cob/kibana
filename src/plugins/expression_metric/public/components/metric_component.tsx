@@ -7,7 +7,7 @@
  */
 
 import React, { FunctionComponent, CSSProperties } from 'react';
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 
 interface Props {
   /** The text to display under the metric */

@@ -10,7 +10,7 @@ import React, { FC } from 'react';
 
 import { EuiCallOut, EuiSpacer, EuiButtonEmpty, EuiHorizontalRule } from '@elastic/eui';
 
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 import { FILE_SIZE_DISPLAY_FORMAT } from '../../../../../common';
 import { FindFileStructureErrorResponse } from '../../../../../../file_upload/common';
 

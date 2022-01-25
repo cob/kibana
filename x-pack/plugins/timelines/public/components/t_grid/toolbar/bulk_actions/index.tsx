@@ -6,7 +6,7 @@
  */
 
 import { EuiPopover, EuiButtonEmpty, EuiContextMenuPanel } from '@elastic/eui';
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 import React, { useState, useCallback, useMemo } from 'react';
 import styled from 'styled-components';
 import { useUiSetting$ } from '../../../../../../../../src/plugins/kibana_react/public';

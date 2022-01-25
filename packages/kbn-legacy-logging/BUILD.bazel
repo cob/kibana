@@ -27,7 +27,7 @@ NPM_MODULE_EXTRA_FILES = [
 RUNTIME_DEPS = [
   "//packages/kbn-config-schema",
   "//packages/kbn-utils",
-  "@npm//@elastic/numeral",
+  "@npm//@cob/numeral",
   "@npm//@hapi/hapi",
   "@npm//@hapi/podium",
   "@npm//chokidar",
@@ -41,7 +41,7 @@ RUNTIME_DEPS = [
 TYPES_DEPS = [
   "//packages/kbn-config-schema",
   "//packages/kbn-utils",
-  "@npm//@elastic/numeral",
+  "@npm//@cob/numeral",
   "@npm//@hapi/podium",
   "@npm//chokidar",
   "@npm//query-string",

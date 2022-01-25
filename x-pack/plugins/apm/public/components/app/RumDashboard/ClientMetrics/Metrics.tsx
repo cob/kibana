@@ -6,7 +6,7 @@
  */
 
 import * as React from 'react';
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 import styled from 'styled-components';
 import { useContext, useEffect } from 'react';
 import {

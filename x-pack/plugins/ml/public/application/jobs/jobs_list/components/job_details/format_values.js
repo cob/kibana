@@ -5,7 +5,7 @@
  * 2.0.
  */
 
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 import { roundToDecimalPlace } from '../../../../formatters/round_to_decimal_place';
 import { toLocaleString } from '../../../../util/string_utils';
 import { timeFormatter } from '../../../../../../common/util/date_utils';

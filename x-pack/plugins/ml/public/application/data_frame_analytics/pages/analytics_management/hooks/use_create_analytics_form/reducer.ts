@@ -8,7 +8,7 @@
 import { i18n } from '@kbn/i18n';
 import { memoize, isEqual } from 'lodash';
 // @ts-ignore
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 import { isValidIndexName } from '../../../../../../../common/util/es_utils';
 
 import { collapseLiteralStrings } from '../../../../../../../shared_imports';

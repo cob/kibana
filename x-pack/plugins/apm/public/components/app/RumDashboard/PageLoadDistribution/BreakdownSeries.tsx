@@ -7,7 +7,7 @@
 
 import { CurveType, Fit, LineSeries, ScaleType } from '@elastic/charts';
 import React, { useEffect } from 'react';
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 import {
   EUI_CHARTS_THEME_DARK,
   EUI_CHARTS_THEME_LIGHT,

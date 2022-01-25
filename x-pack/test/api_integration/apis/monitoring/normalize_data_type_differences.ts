@@ -4,7 +4,7 @@
  * 2.0; you may not use this file except in compliance with the Elastic License
  * 2.0.
  */
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 
 /**
  * This function is designed to handle type differences between fields in legacy monitoring and MB monitoring.

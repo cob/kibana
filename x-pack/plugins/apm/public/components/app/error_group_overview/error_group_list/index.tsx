@@ -11,7 +11,7 @@ import {
   EuiToolTip,
   RIGHT_ALIGNMENT,
 } from '@elastic/eui';
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 import { i18n } from '@kbn/i18n';
 import React, { useMemo } from 'react';
 import { euiStyled } from '../../../../../../../../src/plugins/kibana_react/common';

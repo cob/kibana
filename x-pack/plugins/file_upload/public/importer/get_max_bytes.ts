@@ -5,7 +5,7 @@
  * 2.0.
  */
 
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 import {
   MAX_FILE_SIZE,
   MAX_FILE_SIZE_BYTES,

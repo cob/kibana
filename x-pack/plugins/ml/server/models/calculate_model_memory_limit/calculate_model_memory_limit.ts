@@ -5,7 +5,7 @@
  * 2.0.
  */
 import type { estypes } from '@elastic/elasticsearch';
-import numeral from '@elastic/numeral';
+import numeral from '@cob/numeral';
 import { IScopedClusterClient } from 'kibana/server';
 import { MLCATEGORY } from '../../../common/constants/field_types';
 import { AnalysisConfig, Datafeed } from '../../../common/types/anomaly_detection_jobs';
