@@ -371,7 +371,7 @@ export class ElasticsearchConfig {
     this.username = rawConfig.username;
     this.password = rawConfig.password;
     this.serviceAccountToken = rawConfig.serviceAccountToken;
-    this.cobtoken = rawConfig.cobtoken;
+    this.cobtoken = readCobToken(rawConfig);
     this.customHeaders = rawConfig.customHeaders;
     this.skipStartupConnectionCheck = rawConfig.skipStartupConnectionCheck;
 
@@ -388,6 +388,14 @@ export class ElasticsearchConfig {
     };
   }
 }
+
+const readCobToken = (rawConfig: ElasticsearchConfigType) => {
+  if (rawConfig.cobtoken) {
+    return readFile(rawConfig.cobtoken);
+  }
+
+  return rawConfig.cobtoken;
+};
 
 const readKeyAndCerts = (rawConfig: ElasticsearchConfigType) => {
   let key: string | undefined;
